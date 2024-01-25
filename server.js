@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Test the Cyclic. Pure True!');
+    res.send('Test the Cyclic. Pure True now!');
 });
 
 db.initialize().then(()=>{
