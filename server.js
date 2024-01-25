@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Test the Cyclic. Pure!');
+    res.send('Test the Cyclic. Pure True!');
 });
 
 db.initialize(process.env.MONGODB_CONN_STRING).then(()=>{
