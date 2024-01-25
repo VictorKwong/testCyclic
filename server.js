@@ -1,3 +1,6 @@
+const ListingsDB = require("./modules/listingsDB.js");
+const db = new ListingsDB();
+
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser');
@@ -17,6 +20,11 @@ app.get('/', (req, res) => {
     res.send('Test the Cyclic. Pure!');
 });
 
-app.listen(HTTP_PORT, ()=>{
-    console.log(`server listening on: ${HTTP_PORT}`);
+db.initialize(process.env.MONGODB_CONN_STRING).then(()=>{
+    app.listen(HTTP_PORT, ()=>{
+        console.log(`server listening on: ${HTTP_PORT}`);
+    });
+}).catch((err)=>{
+console.log(err);
 });
+  
