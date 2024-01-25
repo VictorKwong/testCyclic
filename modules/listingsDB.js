@@ -22,9 +22,9 @@ module.exports = class ListingsDB {
   }
 
   // Pass the connection string to `initialize()`
-  initialize() {
+  initialize(abc) {
     return new Promise((resolve, reject) => {
-      const db = mongoose.createConnection("mongodb+srv://victorkaihong:6nixF7rayB21uVV2@cluster0.8evf3mn.mongodb.net/sample_airbnb");
+      const db = mongoose.createConnection(abc);
 
       db.on('error', (err) => {
         reject(err);
