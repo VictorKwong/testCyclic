@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.send('Test the Cyclic. Pure True!');
 });
 
-db.initialize(process.env.MONGODB_CONN_STRING).then(()=>{
+db.initialize().then(()=>{
     app.listen(HTTP_PORT, ()=>{
         console.log(`server listening on: ${HTTP_PORT}`);
     });

@@ -8,7 +8,7 @@ module.exports = class ListingsDB {
   }
 
   // Pass the connection string to `initialize()`
-  initialize(connectionString) {
+  initialize() {
     return new Promise((resolve, reject) => {
       connectionString = "mongodb+srv://victorkaihong:6nixF7rayB21uVV2@cluster0.8evf3mn.mongodb.net/sample_airbnb?retryWrites=true&w=majority"
       const db = mongoose.createConnection(connectionString);
