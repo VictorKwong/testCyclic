@@ -22,9 +22,9 @@ module.exports = class ListingsDB {
   }
 
   // Pass the connection string to `initialize()`
-  initialize(abc) {
+  initialize() {
     return new Promise((resolve, reject) => {
-      const db = mongoose.createConnection(abc);
+      const db = mongoose.createConnection("mongodb+srv://Victor:7OkL03vI5PTE9FlJ@lentil.1fev0.mongodb.net/test");
 
       db.on('error', (err) => {
         reject(err);
