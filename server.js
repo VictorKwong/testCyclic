@@ -9,8 +9,6 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 app.use(express.json()) // for parsing application/json
 
-require('dotenv').config()
-
 // Add support for incoming JSON entities
 app.use(bodyParser.json());
 // Add support for CORS
