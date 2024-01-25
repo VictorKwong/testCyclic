@@ -30,7 +30,7 @@ module.exports = class ListingsDB {
         reject(err);
       });
       db.once('open', () => {
-        let User = db.model("users", userSchema);
+        let User = db.model("listing", listingSchema);
         console.log(User)
         resolve();
       });
